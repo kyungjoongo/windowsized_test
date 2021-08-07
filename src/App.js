@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+    useWindowSize,
+    useWindowWidth,
+    useWindowHeight,
+} from '@react-hook/window-size/throttled'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = (props) => {
+    const [width, height] = useWindowSize()
+    const onlyWidth = useWindowWidth()
+    const onlyHeight = useWindowHeight()
+
+    const isMobile2 = () => (width < 580 ? true : false)
+
+    return (
+        <div>
+            sdlkflsdkflksdlfkds
+
+            {onlyWidth}
+        </div>
+    )
 }
-
-export default App;
